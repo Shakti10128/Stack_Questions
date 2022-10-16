@@ -64,6 +64,8 @@ int main(){
     s.push(5);
     s.push(6);
     s.push(7);
+    s.push(8);
+
 
     // delete mid element by iteration
     cout<<"deleting mid element by iteration "<<endl;

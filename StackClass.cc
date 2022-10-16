@@ -12,7 +12,8 @@ public:
 
     public:
     Stack(){
-        arr = new T[0];
+        asize = 1;
+        arr = new T[asize];
         index = -1;
         s = 0;
     }
@@ -60,6 +61,9 @@ public:
     }
     int size(){
         return s;
+    }
+    int capacity(){
+        return asize;
     }
     
 };
