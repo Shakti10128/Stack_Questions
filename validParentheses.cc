@@ -1,17 +1,18 @@
-#include<bits/stdc++.h>
+#include<iostream>
 #include"StackClass.cc"
 using namespace std;
 bool isValidParenthesis(string expression)
 {
     // Write your code here.
-    stack<char> s;
+    
+    Stack<char> s;
     for(int i = 0;i<expression.length();i++){
         char ch = expression[i];
         if(ch == '(' || ch == '[' || ch == '{'){
             s.push(ch);
         }
         else{
-          if(!s.empty()){
+          if(!s.isEmpty()){
             char top = s.top();
             if((ch == ')' && top =='(') || (ch == ']' && top == '[') || (ch == '}' && top == '{')){
                 s.pop();
@@ -25,7 +26,7 @@ bool isValidParenthesis(string expression)
               }
     }
     }
-        if(s.empty())
+        if(s.isEmpty())
         return true;
     else
         return false;

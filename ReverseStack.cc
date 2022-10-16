@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 #include"StackClass.cc"
 using namespace std;
 
@@ -35,7 +35,7 @@ void reverseStack(Stack<int> &stack) {
 }
 
 int main(){
-    Stack<int> s(10);
+    Stack<int> s;
     s.push(1);
     s.push(2);
     s.push(3);

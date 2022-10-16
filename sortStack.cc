@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 #include"StackClass.cc"
 using namespace std;
 
@@ -41,7 +41,7 @@ void sortStack(Stack<int> & s){
 }
 
 int main(){
-    Stack<int> s(10);
+    Stack<int> s;
     s.push(1);
     s.push(7);
     s.push(2);

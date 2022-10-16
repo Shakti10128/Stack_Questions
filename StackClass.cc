@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 template<typename T>
 class Stack {
@@ -11,9 +11,8 @@ public:
     int index;
 
     public:
-    Stack(int val){
-        this->asize = val;
-        arr = new T[asize];
+    Stack(){
+        arr = new T[0];
         index = -1;
         s = 0;
     }
@@ -21,7 +20,7 @@ public:
     void push(int num) {
         // Write your code here.
         if(s == asize){
-            int * a = new T[asize*2];
+            T * a = new T[asize*2];
             for(int i = 0;i<asize;i++){
                 a[i] = arr[i];
             }

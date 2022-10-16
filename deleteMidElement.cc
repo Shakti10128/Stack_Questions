@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 #include"StackClass.cc"
 using namespace std;
 
@@ -12,7 +12,7 @@ void print(Stack<int> s){
 /*---------------------delete mid element from the stack by iteration------------*/
 void solve(Stack<int> &temp, int count, int n){
     int mid = n/2;
-    Stack<int> t(0);
+    Stack<int> t;
     while(count<=mid){
         t.push(temp.top());
         temp.pop();
@@ -56,7 +56,7 @@ void deleteMid(Stack<int> &s){
 
 
 int main(){
-    Stack<int> s(10);
+    Stack<int> s;
     s.push(1);
     s.push(2);
     s.push(3);
