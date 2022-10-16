@@ -2,7 +2,7 @@
 #include"StackClass.cc"
 using namespace std;
 
-void print(Stack s){
+void print(Stack<int> s){
     while(!s.isEmpty()){
         cout<<s.top()<<" ";
         s.pop();
@@ -10,9 +10,9 @@ void print(Stack s){
     cout<<endl;
 }
 /*---------------------delete mid element from the stack by iteration------------*/
-void solve(Stack &temp, int count, int n){
+void solve(Stack<int> &temp, int count, int n){
     int mid = n/2;
-    Stack t(0);
+    Stack<int> t(0);
     while(count<=mid){
         t.push(temp.top());
         temp.pop();
@@ -25,7 +25,7 @@ void solve(Stack &temp, int count, int n){
     }
 }
 
-void deleteMiddle(Stack &s, int N){
+void deleteMiddle(Stack<int> &s, int N){
    // Write your code here
     int count = 0;
     solve(s,count,N);
@@ -33,7 +33,7 @@ void deleteMiddle(Stack &s, int N){
 
 /*---------------------deleting mid element by recursion-------------------------*/
 
-void solve1(Stack &s,int count,int size){
+void solve1(Stack<int> &s,int count,int size){
     if(count == size/2){
         s.pop();
         return;
@@ -48,7 +48,7 @@ void solve1(Stack &s,int count,int size){
     s.push(num);
 }
 
-void deleteMid(Stack &s){
+void deleteMid(Stack<int> &s){
     int size = s.size();
     int count = 0;
     solve(s,count,size);
@@ -56,7 +56,7 @@ void deleteMid(Stack &s){
 
 
 int main(){
-    Stack s(10);
+    Stack<int> s(10);
     s.push(1);
     s.push(2);
     s.push(3);
